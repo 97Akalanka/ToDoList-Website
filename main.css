@@ -1,0 +1,135 @@
+/* Remove :root and define variables directly in styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('assets/Background.jpg') no-repeat center center fixed; /* Add background image */
+    background-size: cover; /* Make sure the background covers the entire body */
+    color: #222831; /* Text Color */
+}
+
+header {
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #00ADB5; /* Primary Color */
+    margin-bottom: 1.5rem;
+}
+
+#new-task-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#new-task-input {
+    flex: 1;
+    background-color: #ffffff; /* Light Text Color */
+    color: #000000; /* Text Color */
+    border: 3px solid #e44848; /* Primary Color */
+    font-size: 1rem;
+}
+
+#new-task-input::placeholder {
+    color: #393E46; /* Secondary Color */
+}
+
+#new-task-submit {
+    background-color: #FF5722; /* Accent Color */
+    color: #FFFFFF; /* Light Text Color */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-task-submit:hover {
+    background-color: #00ADB5; /* Primary Color */
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-list h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #ffffff; /* Secondary Color */
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; /* Light Text Color */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #e44848; /* Primary Color */
+}
+
+.task .content {
+    flex: 1;
+}
+
+.task .content .text {
+    font-size: 1.5rem;
+    color: #000000; /* Text Color */
+    width: 100%;
+    display: block;
+}
+
+.task .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task .actions button {
+    background-color: #393E46; /* Secondary Color */
+    color: #FFFFFF; /* Light Text Color */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task .actions button:hover {
+    background-color: #FF5722; /* Accent Color */
+}
+
+.task .actions .edit {
+    background-color: #00ADB5; /* Primary Color */
+}
+
+.task .actions .delete {
+    background-color: #D32F2F; /* Delete Color */
+}
